@@ -1,0 +1,409 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0f172a;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar .nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero h1 span {
+  color: #38bdf8;
+}
+
+.hero h2 {
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+.hero p {
+  margin: 1rem 0;
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background: #38bdf8;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover{
+background-color:#0f172a ;
+color:#38bdf8 ;
+border: 2px solid #38bdf8;
+
+}
+.btn-outline {
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+  padding: 0.6rem 1.4rem;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-outline:hover{
+  color: white;
+  background-color:#38bdf8 ;
+}
+/* About */
+.about {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Skills */
+.skills {
+  padding: 4rem 2rem;
+  background: #f1f5f9;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skill {
+  background: #38bdf8;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Projects */
+.projects {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Contact */
+.contact {
+  padding: 4rem 2rem;
+  background: #f1f5f9;
+  text-align: center;
+}
+
+.contact a {
+  color: #0f172a;
+  font-weight: bold;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact-form button {
+  background: #38bdf8;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #0ea5e9;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0f172a;
+  color: white;
+  height: 40vh;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #1e293b;
+  color: white;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Desktop Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Side Panel (Mobile Menu) */
+.side-panel {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #0f172a;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.side-panel a {
+  display: block;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+  border-bottom: #f1f5f9 1px solid;
+}
+
+.side-panel a:hover {
+  background: #334155;
+}
+
+.side-panel .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .nav-links {
+    display: none; /* Hide desktop links on mobile */
+  }
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+  }
+}
+.project-card a:hover{
+color: #a5bbef;
+
+}
+.project-card a{
+    color:#334155 ; 
+}
+.hero-content img{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+.hero {
+  max-width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.hero img {
+  width: 150px;
+  max-width: 100%;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .hero h2 {
+    font-size: 1rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero img {
+    width: 120px;
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: white; /* Icon color */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #3b82f6; /* Hover color */
+}
+
+.social-icons svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor; /* Use color of parent a tag */
+}
+.footer-contact p {
+  margin: 6px 0;
+}
+
+.footer-social h3 {
+  margin-bottom: 12px;
+}
+
+
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #a0a7c7;
+}
+#contact{
+  flex-wrap: wrap;
+}
+@media  (max-width:328px) {
+  #contact p {
+    font-size: 10px;
+  }
+  
+}
+.social-icons-inline a:hover{
+  background-color: rgb(4, 28, 63);
+  
+}
+.social-icons-inline a{
+  
+  border-radius: 50%;
+}
+.social-icons-inline{
+padding-bottom: 15px;
+padding-top: 30px;
+display: flex;
+gap: 14px;
+justify-content: center;
+text-align: center;
+}
+.social-icons a svg {
+  transition: fill 0.3s ease;
+}
+
+.social-icons a.icon-linkedin:hover svg {
+  fill: #0A66C2; /* LinkedIn blue */
+}
